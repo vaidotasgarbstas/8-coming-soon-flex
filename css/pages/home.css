@@ -1,0 +1,194 @@
+/* base */
+@import '../base/reset.css';
+@import '../base/variables.css';
+@import '../base/layout.css';
+
+/* 3th party components */
+@import '../components/font-awesome.css';
+
+/* components */
+@import '../components/button.css';
+@import '../components/clock.css';
+@import '../components/form.css';
+@import '../components/mouse.css';
+@import '../components/progress-bar.css';
+
+/* CUSTOM STYLE BELOW THIS COMMENT, FOR THIS PAGE */
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding-bottom: 30px;
+    background-image: url(../../img/banner-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.hero > .row-short {
+    text-align: center;
+}
+.hero .logo {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 45px;
+    object-fit: contain;
+    object-position: center;
+}
+.hero .main-title {
+    margin-bottom: 15px;
+    font-size: 45px;
+    color: #010103;
+    font-style: bold;
+    text-transform: uppercase;
+}
+.hero .main-description {
+    margin-bottom: 30px;
+    color: #b3b2b7;
+    font-size: 18px;
+}
+.hero .clock {
+    margin-bottom: 30px;
+}
+.hero .form {
+    width: 90%;
+    margin: 0 5% 40px;
+}
+.hero .form > .input {
+    color: #fff;
+    border-color: currentColor;
+}
+.hero .form > .input::placeholder {
+    color: currentColor;
+}
+
+/* MAIN CONTENT */
+
+.column > * {
+    margin-bottom: 20px;
+}
+.column > *:last-child {
+    margin-bottom: 0;
+}
+.content-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2em;
+    position: sticky;
+    top: 0;
+
+}
+.content-description {
+    font-size: 17px;
+    color: #b3b2b7;
+}
+.content-description > .link {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.content-description > .link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+main .form > button {
+    float: right;
+}
+
+@media (min-width: 900px) {
+    main .form > input.input {
+        width: calc(50% - 10px);
+    }
+    main .form > input.input:last-of-type {
+        float: right;
+    }
+}
+
+/* FOOTER */
+
+footer.container {
+    padding-top: 0;
+    font-size: 17px;
+    text-align: center;
+    color: #fff8;
+}
+.socials {
+    padding: 15px 0;
+    border-bottom: 2px solid #fff;
+    position: relative;
+}
+.socials > .social {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+.socials > .social:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+footer .logo {
+    max-height: 50px;
+    width: 100%;
+    margin: 50px 0;
+    object-fit: contain;
+    object-position: top;
+}
+
+footer .trio {
+    display: inline-block;
+}
+footer .trio > p {
+    float: left;
+    padding: 0 10px;
+    position: relative;
+}
+
+footer .trio > p::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 70%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+footer .trio > p:first-child::before {
+    display: none;
+}
+
+footer .link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dollar::before {
+    content: '$';
+}
+.dollar::after {
+    content: '🎅';
+}
+
+@media (max-width: 700px) {
+    footer .trio > p {
+        width: 100%;
+    }
+    footer .trio > p::before {
+        display: none;
+    }
+}
+
+.back-to-top {
+    position: absolute;
+    top: -0.8em;
+    right: -0.4em;
+}
+
+@media (max-width: 700px) {
+    .back-to-top {
+        display: none;
