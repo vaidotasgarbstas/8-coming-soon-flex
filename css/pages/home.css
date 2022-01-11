@@ -26,33 +26,29 @@
     background-attachment: fixed;
 }
 .hero > .row-short {
+    align-items: center;
     text-align: center;
 }
 .hero .logo {
     width: 100%;
     height: 50px;
-    margin-bottom: 45px;
     object-fit: contain;
     object-position: center;
 }
 .hero .main-title {
-    margin-bottom: 15px;
     font-size: 45px;
     color: #010103;
     font-style: bold;
     text-transform: uppercase;
 }
 .hero .main-description {
-    margin-bottom: 30px;
     color: #b3b2b7;
     font-size: 18px;
 }
 .hero .clock {
-    margin-bottom: 30px;
 }
 .hero .form {
     width: 90%;
-    margin: 0 5% 40px;
 }
 .hero .form > .input {
     color: #fff;
@@ -65,10 +61,8 @@
 /* MAIN CONTENT */
 
 .column > * {
-    margin-bottom: 20px;
 }
 .column > *:last-child {
-    margin-bottom: 0;
 }
 .content-title {
     text-transform: uppercase;
@@ -76,7 +70,6 @@
     line-height: 1.2em;
     position: sticky;
     top: 0;
-
 }
 .content-description {
     font-size: 17px;
@@ -90,16 +83,14 @@
     color: var(--secondary-color);
     text-decoration: underline;
 }
-main .form > button {
-    float: right;
+main .form {
+    align-items: flex-end;
 }
 
 @media (min-width: 900px) {
     main .form > input.input {
-        width: calc(50% - 10px);
     }
     main .form > input.input:last-of-type {
-        float: right;
     }
 }
 
@@ -111,7 +102,11 @@ footer.container {
     text-align: center;
     color: #fff8;
 }
-.socials {
+.container > .socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 15px 0;
     border-bottom: 2px solid #fff;
     position: relative;
@@ -130,19 +125,21 @@ footer.container {
     background-color: #fff;
     color: var(--primary-color);
 }
+footer.container > .row-short {
+    gap: 0;
+}
 footer .logo {
     max-height: 50px;
     width: 100%;
-    margin: 50px 0;
+    margin-bottom: 30px;
     object-fit: contain;
     object-position: top;
 }
-
 footer .trio {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 footer .trio > p {
-    float: left;
     padding: 0 10px;
     position: relative;
 }
@@ -175,8 +172,8 @@ footer .link {
 }
 
 @media (max-width: 700px) {
-    footer .trio > p {
-        width: 100%;
+    footer .trio {
+        flex-direction: column;
     }
     footer .trio > p::before {
         display: none;
@@ -192,3 +189,5 @@ footer .link {
 @media (max-width: 700px) {
     .back-to-top {
         display: none;
+    }
+}
